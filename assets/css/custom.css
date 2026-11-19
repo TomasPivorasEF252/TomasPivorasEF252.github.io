@@ -151,3 +151,133 @@ a:hover {
 #services table tbody tr:hover td {
   background-color: #3a3a3a;
 }
+
+/* ===== LD10: kompetencijų pažangos modulis ===== */
+.skill-info, .skill-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.info-box, .stat-box {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1a;
+  border: 2px solid #f5a623;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+.info-label {
+  color: #d6d6d6;
+  font-size: 0.95rem;
+}
+.info-value {
+  color: #f5a623;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.xp-bar-wrap {
+  margin-bottom: 30px;
+}
+.xp-bar {
+  background-color: #333333;
+  border-radius: 20px;
+  height: 28px;
+  overflow: hidden;
+}
+.xp-bar-fill {
+  background-color: #f5a623;
+  color: #111111;
+  font-weight: 700;
+  height: 100%;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 20px;
+}
+.kanban {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.kanban-column {
+  flex: 1 1 250px;
+  background-color: #1a1a1a;
+  border-radius: 14px;
+  padding: 20px;
+}
+.kanban-column h3 {
+  text-align: center;
+  border-bottom: 3px solid #f5a623;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.skill-card {
+  background-color: #2a2a2a;
+  border-left: 5px solid #f5a623;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+}
+.skill-card h4 {
+  margin: 0 0 6px;
+}
+.skill-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== LD10 papildoma: animacijos ===== */
+#services {
+  background: linear-gradient(-45deg, #1a1a1a, #3a2a00, #0b3a4a, #2a1a3a);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.shapes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.shape {
+  width: 60px;
+  height: 60px;
+}
+.shape-square {
+  background-color: #f5a623;
+  animation: spin 4s linear infinite;
+}
+.shape-circle {
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation: grow 2s ease-in-out infinite;
+}
+.shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 55px solid #f5a623;
+  background: none;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes grow {
+  0%, 100% { transform: scale(0.6); }
+  50% { transform: scale(1.3); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
