@@ -1,0 +1,153 @@
+/* LD9 - custom.css (kraunamas po main.css) */
+
+/* 2. Tipografija */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #e8e8e8;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.7rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d6d6d6;
+}
+
+/* 3. Mygtukai ir nuorodos */
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border-radius: 30px;
+  padding: 12px 28px;
+  transition: all 0.3s;
+}
+.btn-primary {
+  background-color: #f5a623;
+  border: 2px solid #f5a623;
+  color: #111111;
+}
+.btn-primary:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #111111;
+}
+.btn-primary:active {
+  background-color: #c4841a;
+  border-color: #c4841a;
+  transform: scale(0.95);
+}
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #f5a623;
+  color: #f5a623;
+}
+.btn-outline:hover {
+  background-color: #f5a623;
+  color: #111111;
+}
+.btn-outline:active {
+  background-color: #c4841a;
+  color: #111111;
+  transform: scale(0.95);
+}
+a {
+  color: #f5a623;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* 4. Sekcijų tarpai ir blokų rėmeliai */
+#about, #skills, #resume, #portfolio {
+  margin: 30px 0;
+  padding: 70px 0;
+}
+.skill-box, .education-item, .experience-item, .portfolio-card {
+  border: 2px solid #f5a623;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* 5. Du papildomi komponentai: navigacija ir scroll-top */
+.header {
+  background-color: #1a1a1a;
+  border-bottom: 3px solid #f5a623;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+.navmenu a {
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+.scroll-top {
+  background-color: #f5a623;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+.scroll-top i {
+  color: #111111;
+}
+
+/* Papildoma: sąrašai */
+#services ul {
+  list-style: none;
+  padding-left: 0;
+}
+#services ul > li::before {
+  content: "\2192  ";
+  color: #f5a623;
+  font-weight: 700;
+}
+#services ul ul {
+  padding-left: 30px;
+}
+#services ul ul > li::before {
+  content: "\2022  ";
+  color: #ffffff;
+}
+#services ol {
+  list-style: none;
+  counter-reset: step;
+  padding-left: 0;
+}
+#services ol > li {
+  counter-increment: step;
+}
+#services ol > li::before {
+  content: counter(step) ". ";
+  color: #f5a623;
+  font-weight: 700;
+}
+
+/* Papildoma: lentelė */
+#services table th,
+#services table td {
+  padding: 14px;
+  text-align: center;
+  vertical-align: middle;
+}
+#services table thead th {
+  background-color: #f5a623;
+  color: #111111;
+}
+#services table tbody tr:nth-child(even) td {
+  background-color: #2a2a2a;
+}
+#services table tbody tr:hover td {
+  background-color: #3a3a3a;
+}
