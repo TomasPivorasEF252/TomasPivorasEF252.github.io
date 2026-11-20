@@ -82,44 +82,26 @@
       <div class="container">
 
         <div class="skill-info">
-          <div class="info-box"><span class="info-label">Bendras XP</span><span class="info-value">170 XP</span></div>
-          <div class="info-box"><span class="info-label">Lygis</span><span class="info-value">3</span></div>
-          <div class="info-box"><span class="info-label">Rangas</span><span class="info-value">Specialistas</span></div>
+          <div class="info-box"><span class="info-label">Bendras XP</span><span class="info-value" id="xp-total"></span></div>
+          <div class="info-box"><span class="info-label">Lygis</span><span class="info-value" id="level"></span></div>
+          <div class="info-box"><span class="info-label">Rangas</span><span class="info-value" id="rank"></span></div>
         </div>
 
         <div class="xp-bar-wrap">
-          <p class="xp-bar-text">Progresas iki 4 lygio: 170 / 300 XP</p>
-          <div class="xp-bar"><div class="xp-bar-fill" style="width: 57%;">57%</div></div>
+          <p class="xp-bar-text" id="xp-text"></p>
+          <div class="xp-bar"><div class="xp-bar-fill" id="xp-fill"></div></div>
         </div>
 
         <div class="skill-stats">
-          <div class="stat-box"><span class="info-label">Bendras įgūdžių skaičius</span><span class="info-value">8</span></div>
-          <div class="stat-box"><span class="info-label">Atlikti įgūdžiai</span><span class="info-value">3</span></div>
-          <div class="stat-box"><span class="info-label">Atlikta</span><span class="info-value">38%</span></div>
+          <div class="stat-box"><span class="info-label">Bendras įgūdžių skaičius</span><span class="info-value" id="stat-total"></span></div>
+          <div class="stat-box"><span class="info-label">Atlikti įgūdžiai</span><span class="info-value" id="stat-done"></span></div>
+          <div class="stat-box"><span class="info-label">Atlikta</span><span class="info-value" id="stat-pct"></span></div>
         </div>
 
         <div class="kanban">
-
-          <div class="kanban-column">
-            <h3>Planuojama</h3>
-            <div class="skill-card"><h4>PCB gamyba</h4><p>Būsena: Planuojama</p><p>30 XP</p></div>
-            <div class="skill-card"><h4>Signalų apdorojimas</h4><p>Būsena: Planuojama</p><p>80 XP</p></div>
-          </div>
-
-          <div class="kanban-column">
-            <h3>Mokomasi</h3>
-            <div class="skill-card"><h4>LTspice</h4><p>Būsena: Mokomasi</p><p>40 XP</p></div>
-            <div class="skill-card"><h4>Python</h4><p>Būsena: Mokomasi</p><p>70 XP</p></div>
-            <div class="skill-card"><h4>ESP32 programavimas</h4><p>Būsena: Mokomasi</p><p>60 XP</p></div>
-          </div>
-
-          <div class="kanban-column">
-            <h3>Atlikta</h3>
-            <div class="skill-card"><h4>Grandinių analizė</h4><p>Būsena: Atlikta</p><p>80 XP</p></div>
-            <div class="skill-card"><h4>KiCad</h4><p>Būsena: Atlikta</p><p>50 XP</p></div>
-            <div class="skill-card"><h4>Litavimas</h4><p>Būsena: Atlikta</p><p>40 XP</p></div>
-          </div>
-
+          <div class="kanban-column" data-status="Planuojama"><h3>Planuojama</h3></div>
+          <div class="kanban-column" data-status="Mokomasi"><h3>Mokomasi</h3></div>
+          <div class="kanban-column" data-status="Atlikta"><h3>Atlikta</h3></div>
         </div>
 
       </div>
@@ -171,6 +153,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/progress.js"></script>
 
 </body>
 
