@@ -281,3 +281,21 @@ a:hover {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-30px); }
 }
+
+/* LD11 - kontaktų formos validacija */
+.contact-form .form-control.is-invalid {
+  border-color: #ff6b6b;
+  background-image: none;
+}
+.contact-form .field-error {
+  color: #ff8a8a;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+.contact-form .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.contact-form #isvalyti {
+  margin-left: 10px;
+}

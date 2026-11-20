@@ -125,35 +125,50 @@
               <h3>Susisiekite</h3>
               <p>Užpildykite formą ir atsakysiu kuo greičiau.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <form id="kontaktu-forma" novalidate>
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Jūsų vardas" required="">
+                    <input type="text" name="vardas" class="form-control" placeholder="Vardas" required>
                   </div>
 
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Jūsų el. paštas" required="">
+                  <div class="col-md-6">
+                    <input type="text" name="pavarde" class="form-control" placeholder="Pavardė" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="El. paštas" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="text" name="telefonas" class="form-control" placeholder="Telefono numeris (+370 6xx xxxxx)" maxlength="14" inputmode="numeric" required>
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Tema" required="">
+                    <input type="text" name="adresas" class="form-control" placeholder="Adresas" required>
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Žinutė" required=""></textarea>
+                    <input type="number" name="k1" class="form-control" placeholder="1. Kaip vertinate svetainės dizainą? (1-10)" min="1" max="10" step="1" required>
+                  </div>
+
+                  <div class="col-12">
+                    <input type="number" name="k2" class="form-control" placeholder="2. Kaip vertinate turinio aiškumą? (1-10)" min="1" max="10" step="1" required>
+                  </div>
+
+                  <div class="col-12">
+                    <input type="number" name="k3" class="form-control" placeholder="3. Kaip vertinate naudojimo patogumą? (1-10)" min="1" max="10" step="1" required>
                   </div>
 
                   <div class="col-12 text-center">
-                    <div class="loading">Kraunama</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Žinutė išsiųsta. Ačiū!</div>
-
-                    <button type="submit" class="btn">Siųsti žinutę</button>
+                    <button type="submit" id="siusti" class="btn" disabled>Siųsti</button>
+                    <button type="button" id="isvalyti" class="btn">Išvalyti</button>
                   </div>
 
                 </div>
               </form>
+
+              <div id="rezultatas" class="mt-4"></div>
 
             </div>
           </div>
@@ -209,6 +224,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
